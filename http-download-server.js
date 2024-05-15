@@ -33,11 +33,7 @@ var server = http.createServer()
 
         shell.exec(command, function(err, stdout, stderr) {
           console.log(command);
-          if(err) {
-            console.log(stderr.trim());
-          } else {
-            console.log(stdout.trim());
-          }
+          console.log(stdout.trim());
         });
       }
 
