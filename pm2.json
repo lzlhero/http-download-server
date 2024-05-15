@@ -1,0 +1,14 @@
+[{
+  "script": "http-download-server.js",
+  "name": "http-download-server",
+  "exec_mode": "cluster",
+  "instances": 1,
+  "merge_logs": true,
+  "log_file": "http-download-server.log",
+  "out_file": "NULL",
+  "error_file": "NULL",
+  "log_date_format" : "YYYY-MM-DD HH:mm:ss",
+  "env": {
+    "NODE_ENV": "production"
+  }
+}]
