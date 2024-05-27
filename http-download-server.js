@@ -24,11 +24,11 @@ var server = http.createServer()
       res.end('ok');
 
       if (downloadUrl) {
-        var command = ''
+        var command = '';
         if (process.platform === 'win32') {
-          command = `downloader.bat "${downloadUrl}" "${outFile}"`
+          command = `downloader.bat "${downloadUrl}" "${outFile}"`;
         } else {
-          command = `./downloader.sh "${downloadUrl}" "${outFile}"`
+          command = `./downloader.sh "${downloadUrl}" "${outFile}"`;
         }
 
         shell.exec(command, function(err, stdout, stderr) {
