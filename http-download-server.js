@@ -45,7 +45,8 @@ var server = http.createServer()
   }
 })
 .listen(9999, '0.0.0.0', function() {
-  console.log(`Http Download Server on ${this.address().address}:${this.address().port}`);
+  var { address, port }  = this.address();
+  console.log(`Http Download Server on ${address}:${port}`);
 });
 
 // important, set inactivity http timeout
