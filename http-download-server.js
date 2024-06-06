@@ -5,10 +5,12 @@ var querystring = require('querystring');
 
 const httpTimeout = 5000;
 
+
 // catch exceptions
 process.on('uncaughtException', function (err) {
   console.error(`uncaughtException.\nmessage: ${err.message}\nstack: ${err.stack}`);
 });
+
 
 // http server defination
 var server = http.createServer()
@@ -48,6 +50,7 @@ var server = http.createServer()
   var { address, port }  = this.address();
   console.log(`Http Download Server on ${address}:${port}`);
 });
+
 
 // important, set inactivity http timeout
 server.timeout = httpTimeout;
